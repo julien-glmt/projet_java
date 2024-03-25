@@ -28,11 +28,15 @@ public class PorteVerrouCoulissante{
   }
   
   public void verrouiller() {
-    estDeVerrouille = false;
+    if(this.estDeVerrouille){
+      this.estDeVerrouille = false;
+    }
   }
   
   public void deverrouiller() {
-    estDeVerrouille = true;
+    if(!this.estDeVerrouille){
+      this.estDeVerrouille = true;
+    }
   }
 
   public boolean estVerrouille() {
