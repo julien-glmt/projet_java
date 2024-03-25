@@ -28,3 +28,4 @@ class PorteCoulissante {
   }
 }
 
+//un lien A-1 est une instance qui tient la référence d'une autre instance (lien entre objets )
