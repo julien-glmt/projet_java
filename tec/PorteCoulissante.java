@@ -28,3 +28,4 @@ class PorteCoulissante {
       fermer();
   }
 }
+

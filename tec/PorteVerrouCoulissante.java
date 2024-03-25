@@ -12,7 +12,7 @@ public class PorteVerrouCoulissante{
   public void fermer() {
     porte.fermer();
   }
-
+  
   public void ouvrir() {
     if (this.estVerrouille() ){
       this.deverrouiller();
