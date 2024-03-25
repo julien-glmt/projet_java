@@ -2,7 +2,7 @@ package tec;
 
 public class PorteVerrouCharniere {
     boolean estDeverrouille;  //true : verrou et false : deverrou 
-    private PorteCharniere posi   = new PorteCharniere();  // lien A1 
+    private PorteCharniere posi = new PorteCharniere();  // lien A1 
     public PorteVerrouCharniere(){}
 
     public boolean estVerrouille(){
@@ -30,6 +30,7 @@ public class PorteVerrouCharniere {
     void fermer(){
         posi.fermer();
     }
+
 
     boolean estFerme(){
         return posi.estFerme();

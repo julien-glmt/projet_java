@@ -1,3 +1,4 @@
+package tec;
 //source without documentation for javadoc
 
 class PassagerStandard {

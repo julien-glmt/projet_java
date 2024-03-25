@@ -1,6 +1,6 @@
 package tec;
 
-public class PorteVerrouCoulissante{
+class PorteCoulissante {
   private final int MAX;
   private int pas;
 
@@ -27,6 +27,4 @@ public class PorteVerrouCoulissante{
     else
       fermer();
   }
-}
-
 }

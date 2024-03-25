@@ -1,9 +1,11 @@
+package tec;
 
-class PorteCoulissante {
+public class PorteVerrouCoulissante{
   private final int MAX;
   private int pas;
 
-  public PorteCoulissante(int pasMax) {
+  public PorteVerrouCoulissante(int pasMax) {
+    PorteCoulissante porte 1;
     MAX = pasMax;
     pas = 0;
   }
@@ -28,4 +30,4 @@ class PorteCoulissante {
   }
 }
 
-//un lien A-1 est une instance qui tient la référence d'une autre instance (lien entre objets )
+}

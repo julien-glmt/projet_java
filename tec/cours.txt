@@ -1,0 +1,3 @@
+Lien A un : 
+Un lien A-1 est une instance qui tient la référence d'une autre instance (lien entre objets)
+Par exemple l'objet PorteVerrouCoulissante contient l'objet PorteCoulisante

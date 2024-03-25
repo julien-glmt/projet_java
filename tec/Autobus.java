@@ -1,4 +1,5 @@
 //source without documentation for javadoc
+package tec;
 
 class Autobus {
 
