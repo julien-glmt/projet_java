@@ -1,4 +1,4 @@
-package tec;
+
 /**
  * R'ealisation d'une jauge sur un intervalle d'entiers.
  * <p>
@@ -18,6 +18,7 @@ package tec;
  * @author georgy
  * @since 2006-2019
  */
+
 class Jauge { 
   private int valeur;
   private final int MAX;

@@ -1,4 +1,4 @@
-package tec;
+
 public class Telecommande {
 
   private final int maxPorte;
