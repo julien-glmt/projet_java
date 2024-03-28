@@ -1,4 +1,3 @@
-package tec;
 class Jauge { 
   private int valeur;
   private final int MAX;

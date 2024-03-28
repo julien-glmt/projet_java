@@ -1,50 +1,43 @@
 public class Porte {
-    private PorteCharniere porteCharniere;
-    private PorteCoulissante porteCoulissante;
-
-    // Constructeur pour PorteCharniere
-    private Porte(PorteCharniere porteCharniere) {
-      this.porteCharniere = porteCharniere;
-    }
     
-    // Constructeur pour PorteCoulissante
-    private Porte(PorteCoulissante porteCoulissante) {
-        this.porteCoulissante = porteCoulissante;
-    }
+  private PorteCharniere porteCharniere;
+  private PorteCoulissante porteCoulissante;
 
-    public boolean estFerme() {
-        if (porteCharniere != null) {
-            return porteCharniere.estFerme();
-        } else if (porteCoulissante != null) {
-            return porteCoulissante.estFerme();
-        }
-        // Retourner une valeur par défaut si aucun type n'est défini
-        return true;
-    }
+  private Porte(PorteCharniere c){
+    this.porteCharniere = c;
+  }
 
-    public void fermeer() {
-        if (porteCharniere != null) {
-            porteCharniere.fermer();
-        } else if (porteCoulissante != null) {
-            porteCoulissante.fermer();
-        }
-    }
+  private Porte(PorteCoulissante c){
+    this.porteCoulissante = c;
+  }
 
-    public void ouvriir() {
-        if (porteCharniere != null) {
-            porteCharniere.ouvrir();
-        } else if (porteCoulissante != null) {
-            porteCoulissante.ouvrir();
-        }
-    }
+  static public Porte creerCharniere(){
+    return new Porte(new PorteCharniere());
+  }
 
-    // Méthode de fabrique pour une PorteCharniere
-    public static Porte creerCharnieere() {
-        return new Porte(new PorteCharniere());
-    }
+  static public Porte creerCoulissante(int max){
+    return new Porte(new PorteCoulissante(max));
+  }
 
-    // Méthode de fabrique pour une PorteCoulissante
-    public static Porte creerCoulissante(int max) {
-        return new Porte(new PorteCoulissante(max));
+  public boolean estFerme() {
+    return false;
+  }
+
+  public void fermer() {
+    if(this.porteCharniere != null){
+      this.porteCharniere.fermer();
+    } 
+    if(this.porteCoulissante != null){
+      this.porteCoulissante.fermer();
     }
+  }
+
+  public void ouvrir() {
+    if(this.porteCharniere != null){
+      this.porteCharniere.ouvrir();
+    } 
+    if(this.porteCoulissante != null){
+      this.porteCoulissante.ouvrir();
+    }
+  }
 }

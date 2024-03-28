@@ -1,4 +1,4 @@
-package tec;
+
 public class Scenario {
 
   static public void main (String[] args) {

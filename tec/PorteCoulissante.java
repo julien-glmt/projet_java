@@ -1,4 +1,3 @@
-package tec;
 
 class PorteCoulissante {
   private final int MAX;

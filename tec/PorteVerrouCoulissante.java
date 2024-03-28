@@ -1,5 +1,3 @@
-package tec;
-
 public class PorteVerrouCoulissante{
   private int pas;
   private boolean estDeVerrouille = true;
