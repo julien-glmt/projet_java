@@ -1,4 +1,4 @@
-public class PassagerStandard implements Passager{
+public class PassagerStandard implements Passager, Usager{
 
   String nom;
   int destination;

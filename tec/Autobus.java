@@ -1,3 +1,4 @@
+package tec;
 public class Autobus {
   // variable
   private int arretCourant; 
@@ -70,7 +71,7 @@ public class Autobus {
     p.changerEnDehors();
   }
 
-  public String toString(){
+  String toString(){
     return "[arret:" + arretCourant + ", assis:" + jaugeAssis.toString() 
     + ", debout:" + jaugeDebout.toString() + "]";
   }
