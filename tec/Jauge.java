@@ -1,24 +1,3 @@
-
-/**
- * R'ealisation d'une jauge sur un intervalle d'entiers.
- * <p>
- * Une instance de Jauge d'efinit une position par rapport 'a un intervalle 
- * de r'ef'erence [0, max[. 
- *
- * La position d'une jauge n'est pas limit'e aux valeurs dans l'intervalle.
- * <p>
- * L''etat d'une jauge correspond 'a sa position par rapport 'a l'intervalle
- * de r'ef'erence [0, max[.
- * Une jauge d'efinit deux 'etats : 
- * <ul>
- * <li>rouge position de la jauge sup'erieure 'a l'intervalle,
- * <li>vert position de la jauge dans l'intervalle, 
- * </ul>
- * 
- * @author georgy
- * @since 2006-2019
- */
-
 class Jauge { 
   private int valeur;
   private final int MAX;

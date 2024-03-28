@@ -1,5 +1,3 @@
-
-
 public class Autobus {
   // variable
   private int arretCourant; 
