@@ -2,6 +2,7 @@ package tec;
 interface Passager {
 
   public String nom();
+  
   boolean estDehors();
   
   boolean estAssis();
@@ -18,5 +19,4 @@ interface Passager {
 
   void nouvelArret(Autobus v, int numeroArret);
   
-
-
+}

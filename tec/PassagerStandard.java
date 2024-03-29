@@ -1,4 +1,5 @@
-public class PassagerStandard implements Passager, Usager{
+package tec;
+public class PassagerStandard implements Passager, Usager {
 
   String nom;
   int destination;
@@ -46,6 +47,19 @@ public class PassagerStandard implements Passager, Usager{
       t.arretDemanderAssis(this);
       }
   }
+//   public void nouvelArret(Autobus t, int numeroArret) {
+//     if (t.arretDemanderSortie(this)) {
+//         if (this.estAssis()) {
+//             t.arretDemanderDebout(this);
+//         } else if (this.estDebout()) {
+//             t.arretDemanderAssis(this);
+//         }
+//     }
+// }
+
+// public void nouvelArret(Autobus t, int numeroArret) {
+//  sortir(t, numeroArret+1);
+//   }
 
   public void assisDebout(Autobus b) {
       assis(b);
@@ -73,6 +87,9 @@ public class PassagerStandard implements Passager, Usager{
   }
   public String toString() {
     return nom + "  " + pos;
+  }
+  public String nom() {
+    return nom;
   }
 }
 

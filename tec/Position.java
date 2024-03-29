@@ -1,5 +1,5 @@
-
-public class Position {
+package tec;
+class Position {
 
   static private final int DEHORS = 1;
   static private final int ASSIS  = 2;

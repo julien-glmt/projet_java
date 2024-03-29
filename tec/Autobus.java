@@ -1,5 +1,5 @@
 package tec;
-public class Autobus {
+public class Autobus implements DemandeArret{
   // variable
   private int arretCourant; 
   private Jauge jaugeAssis;
@@ -15,15 +15,14 @@ public class Autobus {
     for(int i = 0; i < mesPassagers.length; i++){
       mesPassagers[i] = null; 
     }
-
   }
 
   // public methods
-  boolean aPlaceAssise() {
+  public boolean aPlaceAssise() {
     return jaugeAssis.estVert();
   }
 
-  boolean aPlaceDebout() {
+  public boolean aPlaceDebout() {
     return jaugeDebout.estVert();
   }
 
@@ -48,19 +47,19 @@ public class Autobus {
     }
   }
 
-  void arretDemanderAssis(Passager p) {
+   public void arretDemanderAssis(Passager p) {
     jaugeDebout.decrementer();
     jaugeAssis.incrementer();
     p.changerEnAssis();
   }
 
-  void arretDemanderDebout(Passager p) {
+  public void arretDemanderDebout(Passager p) {
     jaugeAssis.decrementer();
     jaugeDebout.incrementer();
     p.changerEnDebout();
   }
 
-  void arretDemanderSortie(Passager p) {
+  public void arretDemanderSortie(Passager p) {
     if(p.estDebout()){ // On décrémente la jauge correspondant à la position du passager
       jaugeDebout.decrementer();
     }
@@ -71,7 +70,7 @@ public class Autobus {
     p.changerEnDehors();
   }
 
-  String toString(){
+  public String toString(){
     return "[arret:" + arretCourant + ", assis:" + jaugeAssis.toString() 
     + ", debout:" + jaugeDebout.toString() + "]";
   }

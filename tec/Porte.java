@@ -1,13 +1,14 @@
+package tec;
 public class Porte {
     
   private PorteCharniere porteCharniere;
   private PorteCoulissante porteCoulissante;
 
-  private Porte(PorteCharniere c){
+  Porte(PorteCharniere c){
     this.porteCharniere = c;
   }
 
-  private Porte(PorteCoulissante c){
+  Porte(PorteCoulissante c){
     this.porteCoulissante = c;
   }
 

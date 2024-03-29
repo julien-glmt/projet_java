@@ -1,4 +1,6 @@
-public class PorteVerrouCoulissante{
+package tec;
+
+class PorteVerrouCoulissante{
   private int pas;
   private boolean estDeVerrouille = true;
   PorteCoulissante porte = new PorteCoulissante(pas);

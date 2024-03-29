@@ -1,5 +1,5 @@
+package tec;
 public interface Usager{
     public String nom();
-    public void allerArretSuivant();
-    public void monterDans(Autobus t);
+   public void monterDans(Autobus t);
 }

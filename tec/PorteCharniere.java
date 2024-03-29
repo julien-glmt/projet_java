@@ -1,4 +1,4 @@
-
+package tec;
 public class PorteCharniere {
   private boolean estFerme;
 

@@ -1,25 +1,27 @@
-
+import tec.Usager;
+import tec.Autobus;
+import tec.PassagerStandard;
 
 public class Simple {
 
   /*
-   * Affiche les 'etats d'un usager et d'un transport.
-   * Sur un param`etre de type Object, la m'ethode println()
+   * Affiche les états d'un usager et d'un transport.
+   * Sur un paramètre de type Object, la méthode println()
    * utilise la methode toString().
-   * La m'ethodes toString() doit ^etre redÃ©finie dans les
+   * La méthodes toString() doit être redéfinie dans les
    * deux classes PassagerStandard et Autobus.
    */
 
-   static private void deboguerEtat (Autobus t, Passager p) {
+   static private void deboguerEtat (Autobus t, Usager p) {
     System.out.println(p);
     System.out.println(t);
   } 
   static public void main (String[] args) {
     Autobus serenity = new Autobus(1, 2);
 
-    PassagerStandard kaylee = new PassagerStandard("Kaylee", 4);
-    PassagerStandard jayne = new PassagerStandard("Jayne", 4);
-    PassagerStandard inara = new PassagerStandard("Inara", 5);
+    Usager kaylee = new PassagerStandard("Kaylee", 4);
+    Usager jayne = new PassagerStandard("Jayne", 4);
+    Usager inara = new PassagerStandard("Inara", 5);
 
     System.out.println(serenity);
 
