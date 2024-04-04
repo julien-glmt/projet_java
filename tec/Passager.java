@@ -1,22 +1,20 @@
 package tec;
+
 interface Passager {
 
-  public String nom();
+  public boolean estDehors();
   
-  boolean estDehors();
+  public boolean estAssis();
   
-  boolean estAssis();
+  public boolean estDebout();
   
-  boolean estDebout();
+  public void changerEnDehors();
   
-  void changerEnDehors();
+  public void changerEnAssis();
   
-  void changerEnAssis();
-  
-  void changerEnDebout();
+  public void changerEnDebout();
 
-  void assisDebout(Autobus v);
-
-  void nouvelArret(Autobus v, int numeroArret);
+  public void nouvelArret(Autobus v, int numeroArret);
   
 }
+

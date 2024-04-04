@@ -30,32 +30,6 @@ class Aiguillage {
   }
 }
 
-class A {
-  public void jeter() {
-    System.out.print("<Hop Hop>");
-  }
-
-  public void rattrapper() {
-    System.out.println("<Poh Poh>");
-  }
-}
-
-
-class B {
-  public void lancer() {
-    System.out.println("shazammm");
-  }
-}
-
-public class RetI implements ActionExecutable {
-    public void executer() {
-        caster();
-    }
-
-    public void caster() {
-        System.out.println("Conversion de type");
-    }
-}
 
 class TestAiguillage {
   static public void main(String[] args) {

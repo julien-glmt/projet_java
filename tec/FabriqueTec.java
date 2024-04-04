@@ -6,7 +6,7 @@ abstract class FabriqueTec implements Passager, Usager {
 
   // constructor
 
-  public FabriquePassager(String nom, int destination) {
+  public FabriqueTec(String nom, int destination) {
     System.out.println("Création d'un passager\n");
     this.namePassager = nom;
     this.nbArret = destination;
