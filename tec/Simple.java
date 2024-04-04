@@ -1,6 +1,8 @@
 import tec.Usager;
 import tec.Autobus;
 import tec.PassagerStandard;
+import tec.PassagerStresse;
+import tec.PassagerLunatique;
 
 public class Simple {
 
@@ -19,9 +21,9 @@ public class Simple {
   static public void main (String[] args) {
     Autobus serenity = new Autobus(1, 2);
 
-    Usager kaylee = new PassagerStandard("Kaylee", 4);
+    Usager kaylee = new PassagerLunatique("Kaylee", 4);
     Usager jayne = new PassagerStandard("Jayne", 4);
-    Usager inara = new PassagerStandard("Inara", 5);
+    Usager inara = new PassagerStresse("Inara", 5);
 
     System.out.println(serenity);
 

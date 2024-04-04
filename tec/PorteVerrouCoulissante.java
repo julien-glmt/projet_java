@@ -1,10 +1,12 @@
-package tec;
-
-class PorteVerrouCoulissante{
+class PorteVerrouCoulissante extends PorteCoulissante{
   private int pas;
-  private boolean estDeVerrouille = true;
+  private boolean estDeVerrouille;
   PorteCoulissante porte = new PorteCoulissante(pas);
   
+  public PorteVerrouCoulissante(int pasMax){
+    super(pasMax);
+    estDeVerrouille = true;
+  } 
   public boolean estFerme() {
     return porte.estFerme();
   }
@@ -17,7 +19,7 @@ class PorteVerrouCoulissante{
     if (this.estVerrouille() ){
       this.deverrouiller();
     }
-    porte.ouvrir();
+    super.ouvrir();
   }
 
   public void coulisser() {

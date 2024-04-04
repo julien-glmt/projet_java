@@ -1,6 +1,6 @@
 //source without documentation for javadoc
-package tec;
 
+package tec;
 public class PassagerLunatique extends FabriqueTec {
 
     // constructor
