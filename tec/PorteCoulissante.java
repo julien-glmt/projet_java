@@ -1,4 +1,5 @@
-class PorteCoulissante {
+package tec;
+class PorteCoulissante extends FactoVerrou{
   private final int MAX;
   private int pas;
 
@@ -15,15 +16,15 @@ class PorteCoulissante {
     for (; pas < MAX; pas++) ;
   }
 
-  public void ouvrir() {
+  protected void faireOuvrir() {
     for (; pas > 0; pas--) ;
   }
 
   public void coulisser() {
     if (estFerme())
-      ouvrir();
+      this.ouvrir();
     else
-      fermer();
+      this.fermer();
   }
 }
 

@@ -1,12 +1,12 @@
 package tec;
 
-abstract class FabriqueTec implements Passager, Usager {
+abstract class FactoPassager implements Passager, Usager {
   String namePassager;
   int nbArret;
 
   // constructor
 
-  public FabriqueTec(String nom, int destination) {
+  public FactoPassager(String nom, int destination) {
     System.out.println("Création d'un passager\n");
     this.namePassager = nom;
     this.nbArret = destination;

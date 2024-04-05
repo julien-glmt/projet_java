@@ -1,5 +1,6 @@
+//source without documentation for javadoc
 package tec;
-public class PassagerStandard extends FabriqueTec{
+public class PassagerStandard extends FactoPassager{
 
 // private Position position_passage; 
 
@@ -7,7 +8,7 @@ public class PassagerStandard extends FabriqueTec{
 
 
   public PassagerStandard(String nom, int destination) {
-  super(nom, destination);
+super(nom, destination);
   }
 
   

@@ -1,7 +1,8 @@
 //source without documentation for javadoc
 package tec;
+import javax.swing.text.Position;
 
-public class PassagerAnxieux extends FabriqueTec {
+public class PassagerAnxieux extends FactoPassager {
 
 // private Position position_passage; 
 

@@ -17,5 +17,9 @@ public class PorteCharniere {
   public void ouvrir() {
     estFerme = false;
   }
+
+  protected void faireOuvrir(){
+    estFerme = false;
+  }
 }
 
