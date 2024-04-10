@@ -1,5 +1,5 @@
 package tec;
-public class PorteCharniere {
+public class PorteCharniere implements Porte {
   private boolean estFerme;
 
   public PorteCharniere() {

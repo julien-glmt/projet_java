@@ -1,32 +1,18 @@
 //source without documentation for javadoc
 package tec;
-import javax.swing.text.Position;
 
-public class PassagerAnxieux extends FactoPassager {
+public class PassagerAnxieux implements Usager {
 
-// private Position position_passage; 
+    // constructor
+    private MonteeSportif PassagerAnx;
 
-  // constructor
+    public PassagerAnxieux(String nom, int destination) {
+      PassagerAnx = new MonteeSportif(nom, destination, ComportementArret.ArretSportif);
+    }
 
+    // methods
+    public void monterDans(Autobus b) {
+        PassagerAnx.monterDans(b);
+      }
 
-  public PassagerAnxieux(String nom, int destination) {
-super(nom, destination);
-  }
-
-  //methods
-
-
-   public void monterDans(Autobus t) {
-	debout(t);
-    
-  }
-
-  public void nouvelArret(Autobus t, int numeroArret) {
- sortir(t, numeroArret+1);
-  }
-
-    public String toString() {
-    return namePassager +" "+ posi ; 
-  }
 }
-

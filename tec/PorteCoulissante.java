@@ -1,5 +1,5 @@
 package tec;
-class PorteCoulissante extends FactoVerrou{
+class PorteCoulissante extends PorteCharniere{
   private final int MAX;
   private int pas;
 

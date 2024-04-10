@@ -1,8 +1,6 @@
-import tec.Usager;
+import tec.FabriqueTec;
 import tec.Autobus;
-import tec.PassagerStandard;
-import tec.PassagerStresse;
-import tec.PassagerLunatique;
+import tec.Usager;
 
 public class Simple {
 
@@ -14,16 +12,12 @@ public class Simple {
    * deux classes PassagerStandard et Autobus.
    */
 
-   static private void deboguerEtat (Autobus t, Usager p) {
-    System.out.println(p);
-    System.out.println(t);
-  } 
   static public void main (String[] args) {
     Autobus serenity = new Autobus(1, 2);
 
-    Usager kaylee = new PassagerLunatique("Kaylee", 4);
-    Usager jayne = new PassagerStandard("Jayne", 4);
-    Usager inara = new PassagerStresse("Inara", 5);
+    Usager kaylee = FabriqueTec.fairePassagerStandard("Kaylee", 4);
+    Usager jayne = FabriqueTec.fairePassagerAnxieux("Jayne", 4);
+    Usager inara = FabriqueTec.fairePassagerStresse("Inara", 5);
 
     System.out.println(serenity);
 

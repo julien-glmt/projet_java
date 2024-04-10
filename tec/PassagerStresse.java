@@ -1,30 +1,14 @@
-//source without documentation for javadoc
 package tec;
 
-public class PassagerStresse extends FactoPassager {
+public class PassagerStresse implements Usager{
 
-  int nbDarret;
-  // constructor
+    private MonteeRepos PassagerStress;
 
-  public PassagerStresse(String nom, int destination) {
-    super(nom, destination);
-    this.nbDarret = destination;
-  }
-
-  // methods
-  public void monterDans(Autobus t) {
-    assis(t);
-
-  }
-
-  public void nouvelArret(Autobus t, int numeroArret) {
-
-    if (sortir(t, numeroArret) != true) {
-      if ((this.nbArret - 3) >= numeroArret) {
-        t.arretDemanderDebout(this);
-      }
-
+    public PassagerStresse(String nom, int destination){
+        PassagerStress = new MonteeRepos(nom,destination,ComportementArret.ArretPrudent);
     }
-  }
 
+    final public void monterDans(Autobus b){
+      PassagerStress.monterDans(b);
+    }
 }

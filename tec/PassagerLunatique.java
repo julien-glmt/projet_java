@@ -1,26 +1,18 @@
 //source without documentation for javadoc
 package tec;
 
-public class PassagerLunatique extends FactoPassager {
+public class PassagerLunatique implements Usager {
 
     // constructor
+    private MonteeRepos PassagerLun;
 
     public PassagerLunatique(String nom, int destination) {
-        super(nom, destination);
+        PassagerLun = new MonteeRepos(nom, destination, ComportementArret.ArretNerveux);
     }
 
     // methods
-    public void monterDans(Autobus t) {
-        assisDebout(t);
+    public void monterDans(Autobus b) {
+        PassagerLun.monterDans(b);
       }
 
-    public void nouvelArret(Autobus t, int numeroArret) {
-        sortir(t, numeroArret);
-        if (this.estAssis()) {
-            t.arretDemanderDebout(this);
-        } else if(this.estDebout()) {
-        t.arretDemanderAssis(this);
-        }
-
-    }
 }

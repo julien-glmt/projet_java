@@ -1,18 +1,22 @@
 package tec;
 
-abstract class FactoPassager implements Passager, Usager {
+abstract class FactoPassager extends Passager implements Usager {
   String namePassager;
   int nbArret;
-
+  private Position posi;
+  private ComportementArret ca;
   // constructor
 
-  public FactoPassager(String nom, int destination) {
+  public FactoPassager(String nom, int destination, ComportementArret ca) {
     System.out.println("Création d'un passager\n");
     this.namePassager = nom;
     this.nbArret = destination;
+    this.posi = Position.creer();
+    this.ca = ca;
+
   }
 
-  Position posi = Position.creer();
+  
 
   // methods
   public String nom() {
@@ -20,27 +24,27 @@ abstract class FactoPassager implements Passager, Usager {
   }
 
   public boolean estDehors() {
-    return posi.estDehors();
+    return this.posi.estDehors();
   }
 
   public boolean estAssis() {
-    return posi.estAssis();
+    return this.posi.estAssis();
   }
 
   public boolean estDebout() {
-    return posi.estDebout();
+    return this.posi.estDebout();
   }
 
   public void changerEnDehors() {
-    posi = posi.dehors();
+    posi = this.posi.dehors();
   }
 
   public void changerEnAssis() {
-    posi = posi.assis();
+    posi = this.posi.assis();
   }
 
   public void changerEnDebout() {
-    posi = posi.debout();
+    posi = this.posi.debout();
   } 
 
   public void debout(Autobus b) {
@@ -73,8 +77,25 @@ abstract class FactoPassager implements Passager, Usager {
     }
     return false;
   }
+
+  final public void monterDans(Autobus b){
+        choixPlaceMontee(b);
+}
+
+  int distanceDest(int arret){
+    return(Math.abs(this.nbArret-arret));
+}
+
+  void nouvelArret(Autobus b, int numeroArret) {
+    if (numeroArret == this.nbArret)
+        b.arretDemanderSortie(this);
+    ca.choixPlaceArret(b,this.distanceDest(numeroArret),this);
+  }
   
+  abstract void choixPlaceMontee(Autobus b);
+
   public String toString() {
-    return namePassager + "  " + posi;
+    return namePassager + "  " + this.posi;
   }
 }
+
